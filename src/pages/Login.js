@@ -1,13 +1,21 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from "react";
 import { auth, googleAuth } from "../config/firebase";
 import { signInWithPopup } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
+=======
+import React, { useState } from "react";
+import { auth, googleAuth } from "../config/firebase";
+import { signInWithPopup } from "firebase/auth";
+import { useNavigate, Navigate } from "react-router-dom";
+>>>>>>> origin/main
 import { useGetUserInfo } from "../useGetUserInfo";
 
 const Login = () => {
   const navigate = useNavigate();
   const [isIn, setIn] = useState(false);
 
+<<<<<<< HEAD
   const { isAuth } = useGetUserInfo();
   useEffect(()=>{
     if(isAuth){
@@ -15,6 +23,8 @@ const Login = () => {
     }
   },[]);
 
+=======
+>>>>>>> origin/main
   const signInWithGoogle = async () => {
     const userInfoFromGoogle = await signInWithPopup(auth, googleAuth);
     const user = {
