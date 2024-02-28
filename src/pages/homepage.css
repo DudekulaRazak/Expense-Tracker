@@ -14,19 +14,12 @@ h4 {
 input,
 select,
 label {
-<<<<<<< HEAD
   padding: 3px;
-=======
->>>>>>> origin/main
   font-family: "Roboto", sans-serif;
 }
 
 .container {
-<<<<<<< HEAD
   max-width: 650px;
-=======
-  max-width: 600px;
->>>>>>> origin/main
   margin: auto;
   padding: 20px;
 }
@@ -68,21 +61,12 @@ label {
 }
 
 .transactions {
-<<<<<<< HEAD
   margin-bottom: 10px;
 }
 
 .transactions ul {
   height: 55vh;
   overflow-y: scroll;
-=======
-  height: 55vh;
-  overflow-y: scroll;
-  margin-top: 20px;
-}
-
-.transactions ul {
->>>>>>> origin/main
   list-style-type: none;
   padding: 0;
 }
@@ -91,10 +75,6 @@ label {
   display: flex;
   align-items: center;
   justify-content: space-between;
-<<<<<<< HEAD
-=======
-  /* background-color: #f6f6f6; */
->>>>>>> origin/main
   margin-bottom: 10px;
   padding: 10px;
   border-radius: 5px;

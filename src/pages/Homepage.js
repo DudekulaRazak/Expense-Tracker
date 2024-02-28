@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import React, { useEffect } from "react";
-=======
-import React from "react";
->>>>>>> origin/main
 import { useState } from "react";
 import { useAddTransactions } from "../useAddTransactions";
 import { useGetTransaction } from "../useGetTransactions";
@@ -10,10 +6,6 @@ import { auth, db } from "../config/firebase";
 import { signOut } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import "./homepage.css";
-<<<<<<< HEAD
-import { useGetUserInfo } from "../useGetUserInfo";
-=======
->>>>>>> origin/main
 import {
   collection,
   query,
@@ -26,15 +18,11 @@ const Homepage = () => {
   const [description, setDescription] = useState("");
   const [amount, setAmount] = useState("");
   const [transType, setTransType] = useState("");
-<<<<<<< HEAD
   const [added, setAdded] = useState(false);
-=======
->>>>>>> origin/main
   const { addTransaction } = useAddTransactions();
   const { transactions, transactionTotal } = useGetTransaction();
 
   const { balance, expense, income } = transactionTotal;
-<<<<<<< HEAD
   const navigate = useNavigate();
 
   useEffect(()=>{
@@ -51,8 +39,6 @@ const Homepage = () => {
       return () => clearTimeout(timer);
     }
   }, [added]);
-=======
->>>>>>> origin/main
 
   const onSubmit = async (e) => {
     e.preventDefault();
@@ -61,12 +47,9 @@ const Homepage = () => {
       amount: amount,
       transactionType: transType,
     });
-<<<<<<< HEAD
     setAmount("");
     setDescription("");
     setAdded(true);
-=======
->>>>>>> origin/main
   };
 
   const deleteTransaction = async (createdAt, userID) => {
@@ -87,11 +70,6 @@ const Homepage = () => {
     }
   };
 
-<<<<<<< HEAD
-=======
-  const navigate = useNavigate();
-
->>>>>>> origin/main
   const signUserOut = async () => {
     await signOut(auth);
     localStorage.clear();
@@ -140,10 +118,7 @@ const Homepage = () => {
               type="text"
               name="description"
               onChange={(e) => setDescription(e.target.value)}
-<<<<<<< HEAD
               value={description}
-=======
->>>>>>> origin/main
               required
             />
             <select onChange={(e) => setTransType(e.target.value)} required>
@@ -159,20 +134,15 @@ const Homepage = () => {
               value="Add"
               className="add-btn"
             />
-<<<<<<< HEAD
+
             {added && <i>Transaction has been added !</i>}
-=======
->>>>>>> origin/main
           </form>
         </div>
         <div className="transactions">
           <h3>Transactions</h3>
           <ul>
-<<<<<<< HEAD
+
             {transactions.slice().reverse().map((transaction, index) => {
-=======
-            {transactions.map((transaction, index) => {
->>>>>>> origin/main
               const {
                 userID,
                 description,
